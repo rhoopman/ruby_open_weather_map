@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/weather?lat=9.94&lon=76.26
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&lat=9.94&lon=76.26&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,17 @@ http_interactions:
       message: OK
     headers:
       Server:
-      - nginx
+      - openresty
       Date:
-      - Thu, 28 Aug 2014 10:50:49 GMT
+      - Fri, 23 Aug 2019 14:35:03 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '446'
       Connection:
       - keep-alive
-      X-Source:
-      - back
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&lat=9.94&lon=76.26&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -39,19 +39,8 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET, POST
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJjb29yZCI6eyJsb24iOjc2LjI2LCJsYXQiOjkuOTR9LCJzeXMiOnsibWVz
-        c2FnZSI6MC4wMTkxLCJjb3VudHJ5IjoiSU4iLCJzdW5yaXNlIjoxNDA5MTg2
-        NzUzLCJzdW5zZXQiOjE0MDkyMzExODF9LCJ3ZWF0aGVyIjpbeyJpZCI6ODA0
-        LCJtYWluIjoiQ2xvdWRzIiwiZGVzY3JpcHRpb24iOiJvdmVyY2FzdCBjbG91
-        ZHMiLCJpY29uIjoiMDRkIn1dLCJiYXNlIjoiY21jIHN0YXRpb25zIiwibWFp
-        biI6eyJ0ZW1wIjoyOTkuNzkzLCJ0ZW1wX21pbiI6Mjk5Ljc5MywidGVtcF9t
-        YXgiOjI5OS43OTMsInByZXNzdXJlIjoxMDIwLjk1LCJzZWFfbGV2ZWwiOjEw
-        MjEuMTksImdybmRfbGV2ZWwiOjEwMjAuOTUsImh1bWlkaXR5Ijo5OX0sIndp
-        bmQiOnsic3BlZWQiOjUuNDYsImRlZyI6MzEzLjAwMX0sImNsb3VkcyI6eyJh
-        bGwiOjg4fSwiZHQiOjE0MDkyMjI2MjcsImlkIjoxMjcyMDE4LCJuYW1lIjoi
-        RXJuxIFrdWxhbSIsImNvZCI6MjAwfQo=
+      encoding: UTF-8
+      string: '{"coord":{"lon":76.26,"lat":9.94},"weather":[{"id":701,"main":"Mist","description":"mist","icon":"50n"}],"base":"stations","main":{"temp":26.35,"pressure":1011,"humidity":94,"temp_min":24,"temp_max":27.78},"visibility":4000,"wind":{"speed":2.6,"deg":100},"clouds":{"all":75},"dt":1566570903,"sys":{"type":1,"id":9211,"message":0.007,"country":"IN","sunrise":1566521175,"sunset":1566565779},"timezone":19800,"id":1273874,"name":"Cochin","cod":200}'
     http_version: 
-  recorded_at: Thu, 28 Aug 2014 10:50:48 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Fri, 23 Aug 2019 14:35:03 GMT
+recorded_with: VCR 2.9.3

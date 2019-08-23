@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/find?cnt=-10&lat=55.5&lon=37.5
+    uri: http://api.openweathermap.org/data/2.5/find?APPID=822dcdbcaa7aed363c501e5b70bd263c&cnt=-10&lat=55.5&lon=37.5&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -17,21 +17,21 @@ http_interactions:
       - api.openweathermap.org
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
-      - nginx
+      - openresty
       Date:
-      - Fri, 04 Sep 2015 15:03:12 GMT
+      - Fri, 23 Aug 2019 14:51:09 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '42'
       Connection:
       - keep-alive
-      X-Source:
-      - redis
+      X-Cache-Key:
+      - "/data/2.5/find?APPID=822dcdbcaa7aed363c501e5b70bd263c&cnt=-10&lat=55.5&lon=37.5&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -40,8 +40,7 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: |
-        {"message":"exception: limit must be >=0","cod":"500"}
+      string: '{"cod":"400","message":"cnt from 1 to 50"}'
     http_version: 
-  recorded_at: Fri, 04 Sep 2015 15:03:11 GMT
+  recorded_at: Fri, 23 Aug 2019 14:51:09 GMT
 recorded_with: VCR 2.9.3

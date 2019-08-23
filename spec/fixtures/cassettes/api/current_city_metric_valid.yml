@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/weather?q=,Cochin,%20In&units=metric
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&q=Cochin,%20In&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,17 @@ http_interactions:
       message: OK
     headers:
       Server:
-      - nginx
+      - openresty
       Date:
-      - Thu, 28 Aug 2014 10:50:49 GMT
+      - Fri, 23 Aug 2019 14:57:44 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '445'
       Connection:
       - keep-alive
-      X-Source:
-      - back
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&q=cochin%2c+in&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -40,8 +40,7 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: |
-        {"coord":{"lon":76.26,"lat":9.94},"sys":{"message":0.0191,"country":"India","sunrise":1409186752,"sunset":1409231181},"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04d"}],"base":"cmc stations","main":{"temp":26.643,"temp_min":26.643,"temp_max":26.643,"pressure":1020.95,"sea_level":1021.19,"grnd_level":1020.95,"humidity":99},"wind":{"speed":5.46,"deg":313.001},"clouds":{"all":88},"dt":1409222627,"id":1273874,"name":"Kochi","cod":200}
+      string: '{"coord":{"lon":76.26,"lat":9.94},"weather":[{"id":701,"main":"Mist","description":"mist","icon":"50n"}],"base":"stations","main":{"temp":26.95,"pressure":1012,"humidity":88,"temp_min":25,"temp_max":27.78},"visibility":3500,"wind":{"speed":1,"deg":110},"clouds":{"all":75},"dt":1566571942,"sys":{"type":1,"id":9211,"message":0.0094,"country":"IN","sunrise":1566521175,"sunset":1566565779},"timezone":19800,"id":1273874,"name":"Cochin","cod":200}'
     http_version: 
-  recorded_at: Thu, 28 Aug 2014 10:50:49 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Fri, 23 Aug 2019 14:57:44 GMT
+recorded_with: VCR 2.9.3

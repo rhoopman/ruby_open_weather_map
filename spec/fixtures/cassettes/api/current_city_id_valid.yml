@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/weather?id=1273874
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&id=1273874&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,17 @@ http_interactions:
       message: OK
     headers:
       Server:
-      - nginx
+      - openresty
       Date:
-      - Thu, 28 Aug 2014 10:50:49 GMT
+      - Fri, 23 Aug 2019 14:35:03 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '447'
       Connection:
       - keep-alive
-      X-Source:
-      - redis
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&id=1273874&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -40,8 +40,7 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: |
-        {"coord":{"lon":76.26,"lat":9.94},"sys":{"message":0.8839,"country":"IN","sunrise":1409186753,"sunset":1409231181},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"cmc stations","main":{"temp":299.941,"temp_min":299.941,"temp_max":299.941,"pressure":1021.68,"sea_level":1023.32,"grnd_level":1021.68,"humidity":100},"wind":{"speed":4.91,"deg":311.006},"clouds":{"all":64},"dt":1409221397,"id":1273874,"name":"Cochin","cod":200}
+      string: '{"coord":{"lon":76.26,"lat":9.94},"weather":[{"id":701,"main":"Mist","description":"mist","icon":"50n"}],"base":"stations","main":{"temp":26.34,"pressure":1011,"humidity":94,"temp_min":24,"temp_max":27.78},"visibility":4000,"wind":{"speed":2.6,"deg":100},"clouds":{"all":75},"dt":1566570773,"sys":{"type":1,"id":9211,"message":0.0059,"country":"IN","sunrise":1566521175,"sunset":1566565779},"timezone":19800,"id":1273874,"name":"Cochin","cod":200}'
     http_version: 
-  recorded_at: Thu, 28 Aug 2014 10:50:48 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Fri, 23 Aug 2019 14:35:03 GMT
+recorded_with: VCR 2.9.3

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/weather?q=,invalidid
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&q=invalidid&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -17,21 +17,21 @@ http_interactions:
       - api.openweathermap.org
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Server:
-      - nginx
+      - openresty
       Date:
-      - Thu, 28 Aug 2014 10:50:49 GMT
+      - Fri, 23 Aug 2019 14:35:03 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '40'
       Connection:
       - keep-alive
-      X-Source:
-      - back
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&q=invalidid&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -40,8 +40,7 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: |
-        {"message":"Error: Not found city","cod":"404"}
+      string: '{"cod":"404","message":"city not found"}'
     http_version: 
-  recorded_at: Thu, 28 Aug 2014 10:50:48 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Fri, 23 Aug 2019 14:35:03 GMT
+recorded_with: VCR 2.9.3

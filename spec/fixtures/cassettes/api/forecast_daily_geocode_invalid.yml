@@ -17,21 +17,21 @@ http_interactions:
       - api.openweathermap.org
   response:
     status:
-      code: 200
-      message: OK
+      code: 401
+      message: Unauthorized
     headers:
       Server:
-      - nginx
+      - openresty
       Date:
-      - Wed, 24 Dec 2014 21:15:14 GMT
+      - Fri, 23 Aug 2019 15:06:56 GMT
       Content-Type:
-      - text/html
-      Transfer-Encoding:
-      - chunked
+      - application/json; charset=utf-8
+      Content-Length:
+      - '107'
       Connection:
       - keep-alive
-      X-Source:
-      - redis
+      X-Cache-Key:
+      - "/data/2.5/forecast/daily?lat=181&lon=181"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -40,8 +40,8 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: |
-        {"message":"","cod":"404"}
+      string: '{"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401
+        for more info."}'
     http_version: 
-  recorded_at: Wed, 24 Dec 2014 21:15:15 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Fri, 23 Aug 2019 15:06:56 GMT
+recorded_with: VCR 2.9.3

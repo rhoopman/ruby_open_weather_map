@@ -1,6 +1,6 @@
 describe 'Current weather information with APPID' do
   let(:options) do
-    { units: 'metric', APPID: 1111111111 }
+    { units: 'metric', APPID: "822dcdbcaa7aed363c501e5b70bd263c" }
   end
 
   describe 'searching by city' do
@@ -19,7 +19,7 @@ describe 'Current weather information with APPID' do
     context 'when the city is not found' do
       let(:weather) do
         VCR.use_cassette('integration/current_not_found_city') do
-          OpenWeather::Current.city('Berlin, DE', options)
+          OpenWeather::Current.city('Berliiiiiiin, DE', options)
         end
       end
 

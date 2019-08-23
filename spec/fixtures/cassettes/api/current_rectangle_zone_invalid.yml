@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/box/city?bbox=-5,-5,-5,-5,-5
+    uri: http://api.openweathermap.org/data/2.5/box/city?APPID=822dcdbcaa7aed363c501e5b70bd263c&bbox=-1,32,15,37,10&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -17,21 +17,21 @@ http_interactions:
       - api.openweathermap.org
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
-      - nginx
+      - openresty
       Date:
-      - Fri, 04 Sep 2015 14:51:02 GMT
+      - Fri, 23 Aug 2019 14:50:24 GMT
       Content-Type:
-      - application/json; charset=utf8
-      Transfer-Encoding:
-      - chunked
+      - application/json; charset=utf-8
+      Content-Length:
+      - '108'
       Connection:
       - keep-alive
-      X-Source:
-      - back
+      X-Cache-Key:
+      - "/data/2.5/box/city?APPID=822dcdbcaa7aed363c501e5b70bd263c&bbox=-1%2C32%2C15%2C37%2C10&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -40,8 +40,8 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: |
-        {"message":"","cod":"200","cnt":0,"list":[]}
+      string: '{"cod":"400","message":"Requested area is larger than allowed for your
+        account type (25.00 square degrees)"}'
     http_version: 
-  recorded_at: Fri, 04 Sep 2015 14:51:01 GMT
+  recorded_at: Fri, 23 Aug 2019 14:50:24 GMT
 recorded_with: VCR 2.9.3

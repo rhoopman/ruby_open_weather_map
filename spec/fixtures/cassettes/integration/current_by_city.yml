@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/weather?APPID=1111111111&q=,Berlin,%20DE&units=metric
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&q=Berlin,%20DE&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,17 @@ http_interactions:
       message: OK
     headers:
       Server:
-      - nginx
+      - openresty
       Date:
-      - Thu, 28 Aug 2014 10:32:37 GMT
+      - Fri, 23 Aug 2019 14:23:17 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '446'
       Connection:
       - keep-alive
-      X-Source:
-      - back
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&q=berlin%2c+de&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -40,8 +40,8 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: |
-        {"coord":{"lon":13.38,"lat":52.52},"sys":{"type":1,"id":4892,"message":0.0219,"country":"Germany","sunrise":1409199092,"sunset":1409249019},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"base":"cmc stations","main":{"temp":296.02,"pressure":1018,"humidity":35,"temp_min":294.15,"temp_max":299.26},"wind":{"speed":2.6,"deg":280,"var_beg":260,"var_end":320},"clouds":{"all":40},"dt":1409221912,"id":2822234,"name":"Berlin","cod":200}
+      string: '{"coord":{"lon":13.39,"lat":52.52},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"base":"stations","main":{"temp":28.69,"pressure":1025,"humidity":28,"temp_min":26.67,"temp_max":30.56},"visibility":10000,"wind":{"speed":1.5},"clouds":{"all":0},"dt":1566570101,"sys":{"type":1,"id":1275,"message":0.0092,"country":"DE","sunrise":1566532905,"sunset":1566584222},"timezone":7200,"id":2950159,"name":"Berlin","cod":200}'
     http_version: 
-  recorded_at: Thu, 28 Aug 2014 10:32:37 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Fri, 23 Aug 2019 14:23:17 GMT
+recorded_with: VCR 2.9.3

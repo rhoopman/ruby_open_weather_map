@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/group?id=42,1000
+    uri: http://api.openweathermap.org/data/2.5/group?APPID=822dcdbcaa7aed363c501e5b70bd263c&id=42,1000&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -17,21 +17,21 @@ http_interactions:
       - api.openweathermap.org
   response:
     status:
-      code: 200
-      message: OK
+      code: 500
+      message: Internal Server Error
     headers:
       Server:
-      - nginx
+      - openresty
       Date:
-      - Thu, 03 Sep 2015 18:55:49 GMT
+      - Fri, 23 Aug 2019 14:35:03 GMT
       Content-Type:
-      - application/json; charset=utf8
-      Transfer-Encoding:
-      - chunked
+      - application/json; charset=utf-8
+      Content-Length:
+      - '48'
       Connection:
       - keep-alive
-      X-Source:
-      - redis
+      X-Cache-Key:
+      - "/data/2.5/group?APPID=822dcdbcaa7aed363c501e5b70bd263c&id=42%2C1000&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -40,8 +40,7 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: |
-        {"cnt":0,"list":[]}
+      string: '{"cod":"500","message":"Internal error: 500005"}'
     http_version: 
-  recorded_at: Thu, 03 Sep 2015 18:55:48 GMT
+  recorded_at: Fri, 23 Aug 2019 14:35:03 GMT
 recorded_with: VCR 2.9.3

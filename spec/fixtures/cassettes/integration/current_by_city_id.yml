@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/weather?APPID=1111111111&id=524901&units=metric
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&id=524901&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -21,17 +21,17 @@ http_interactions:
       message: OK
     headers:
       Server:
-      - nginx
+      - openresty
       Date:
-      - Thu, 28 Aug 2014 10:35:16 GMT
+      - Fri, 23 Aug 2019 14:23:17 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '447'
       Connection:
       - keep-alive
-      X-Source:
-      - redis
+      X-Cache-Key:
+      - "/data/2.5/weather?APPID=822dcdbcaa7aed363c501e5b70bd263c&id=524901&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -40,8 +40,8 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: |
-        {"coord":{"lon":37.62,"lat":55.75},"sys":{"type":1,"id":7323,"message":0.2126,"country":"RU","sunrise":1409192848,"sunset":1409243632},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04d"}],"base":"cmc stations","main":{"temp":17.99,"pressure":1004,"humidity":63,"temp_min":16,"temp_max":23.7},"wind":{"speed":6,"deg":200},"clouds":{"all":75},"dt":1409220095,"id":524901,"name":"Moscow","cod":200}
+      string: '{"coord":{"lon":37.62,"lat":55.75},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"base":"stations","main":{"temp":22.2,"pressure":1027,"humidity":46,"temp_min":22,"temp_max":23},"visibility":10000,"wind":{"speed":3,"deg":310},"clouds":{"all":0},"dt":1566570183,"sys":{"type":1,"id":9029,"message":0.0327,"country":"RU","sunrise":1566526567,"sunset":1566578931},"timezone":10800,"id":524901,"name":"Moscow","cod":200}'
     http_version: 
-  recorded_at: Thu, 28 Aug 2014 10:35:16 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Fri, 23 Aug 2019 14:23:17 GMT
+recorded_with: VCR 2.9.3
